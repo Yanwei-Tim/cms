@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="tenimal_list" name="com.hzjava.monitorcenter.domain.TenimalList">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="cardId" column="card_id" access="field" type="java.lang.String"/>
+    <property name="cardType" column="cardtype" access="field" type="java.lang.String"/>
+    <property name="cardModel" column="card_model" access="field" type="java.lang.String"/>
+    <property name="cardVersion" column="card_version" access="field" type="java.lang.String"/>
+    <property name="cardCertidDate" column="card_certid_date" access="field" type="java.util.Date"/>
+    <property name="userDepart" column="userdepart" access="field" type="java.lang.String"/>
+    <property name="userZone" column="userzone" access="field" type="java.lang.String"/>
+    <property name="policeId" column="policenumber" access="field" type="java.lang.String"/>
+    <property name="policeName" column="police_name" access="field" type="java.lang.String"/>
+    <property name="certId" column="cert_id" access="field" type="java.lang.String"/>
+    <property name="certcreateDate" column="certcreate_date" access="field" type="java.util.Date"/>
+    <property name="loginTime" column="login_time" access="field" type="java.util.Date"/>
+    <property name="blockType" length="1" column="block_type" access="field" type="java.lang.String"/>
+    <property name="status" length="1" column="status" access="field" type="java.lang.String"/>
+    <property name="hour" column="hour" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

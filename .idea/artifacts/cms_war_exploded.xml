@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="cms:war exploded">
+    <output-path>E:/fartec/ichange/cms/tomcat/webapps/cms</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="cms" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/shared/common/lib/xyzbvc.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/shared/common/lib/common.jar" />
+          <element id="library" level="project" name="cms" />
+          <element id="library" level="project" name="shared" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/src/resources/action-servlet.xml" />
+        <element id="file-copy" path="$PROJECT_DIR$/src/resources/AppContext.xml" />
+        <element id="file-copy" path="$PROJECT_DIR$/src/resources/BaseContext.xml" />
+      </element>
+      <element id="javaee-facet-resources" facet="cms/web/appserver" />
+    </root>
+  </artifact>
+</component>

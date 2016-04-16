@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="business_log" name="com.hzjava.monitorcenter.domain.BusinessLog">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="level" column="level" access="field" type="java.lang.String"/>
+    <property name="logTime" column="log_time" access="field" type="java.util.Date"/>
+    <property name="businessName" column="business_name" access="field" type="java.lang.String"/>
+    <property name="platformName" column="platform_name" access="field" type="java.lang.String"/>
+    <property name="auditInfo" column="audit_info" access="field" type="java.lang.String"/>
+    <property name="sourceIp" column="source_ip" access="field" type="java.lang.String"/>
+    <property name="sourcePort" column="source_dest" access="field" type="java.lang.String"/>
+    <property name="destIp" length="30" column="dest_ip" access="field" type="java.lang.String"/>
+    <property name="destPort" length="10" column="dest_port" access="field" type="java.lang.String"/>
+    <property name="userName" length="50" column="user_name" access="field" type="java.lang.String"/>
+    <property name="operation" length="100" column="operation" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

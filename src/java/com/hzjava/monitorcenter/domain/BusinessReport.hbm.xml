@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="business_report" name="com.hzjava.monitorcenter.domain.BusinessReport">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="reportDate" column="report_date" access="field" type="java.util.Date"/>
+    <property name="businessName" column="business_name" access="field" type="java.lang.String"/>
+    <property name="recordCount" column="record_count" access="field" type="java.lang.Long"/>
+    <property name="dataVolume" column="datavolume" access="field" type="java.lang.Float"/>
+    <property name="alertCount" column="alert_count" access="field" type="java.lang.Long"/>
+  </class>
+</hibernate-mapping>

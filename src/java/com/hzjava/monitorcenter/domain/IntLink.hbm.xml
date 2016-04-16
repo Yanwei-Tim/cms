@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="int_link" name="com.hzjava.monitorcenter.domain.IntLink">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="linkName" column="link_name" access="field" type="java.lang.String"/>
+    <property name="jrdx" column="jrdx" access="field" type="java.lang.String"/>
+    <property name="exchangeMode" column="exchange_mode" access="field" type="java.lang.String"/>
+    <property name="linkBandWidth" column="link_bandwidth" access="field" type="java.lang.Integer"/>
+    <property name="fwUsed" column="FW_used" access="field" type="java.lang.String"/>
+    <property name="secGatewayUsed" column="sec_gateway_used" access="field" type="java.lang.String"/>
+    <property name="gapUsed" column="gap_used" access="field" type="java.lang.String"/>
+    <property name="vpnUsed" column="VPN_used" access="field" type="java.lang.String"/>
+    <property name="otherSecurity" column="other_security" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

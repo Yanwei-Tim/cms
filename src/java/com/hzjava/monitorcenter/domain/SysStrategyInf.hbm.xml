@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="sysstrategyinf" name="com.hzjava.monitorcenter.domain.SysStrategyInf">
+    <id access="field" name="id" type="long" column="id" length="11">
+      <generator class="increment"/>
+    </id>
+    <property name="strategyDesc" length="60" column="strategy_desc" access="field" type="string"/>
+    <property name="strategyProtocalType" length="4" column="strategy_protocal_type" access="field" type="string"/>
+    <property name="srcIp" length="128" column="scr_ip" access="field" type="string"/>
+    <property name="descIp" length="48" column="dest_ip" access="field" type="string"/>
+    <property name="srcPort" length="128" column="src_port" access="field" type="string"/>
+    <property name="descPort" length="48" column="dest_port" access="field" type="string"/>            
+    <property name="collectTime" column="collect_time" access="field" type="java.util.Date"/>
+  </class>
+</hibernate-mapping>

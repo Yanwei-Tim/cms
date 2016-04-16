@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="business_register" name="com.hzjava.monitorcenter.domain.BusinessRegister">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="businessName" column="business_name" access="field" type="java.lang.String"/>
+    <property name="businessDesc" length="60" column="business_desc" access="field" type="java.lang.String"/>
+    <property name="businessDepart" column="business_depart" access="field" type="java.lang.Long"/>
+    <many-to-one insert="false" column="business_depart" access="field" update="false" class="com.hzjava.monitorcenter.domain.Orgcode" lazy="false" name="businessDepartDistrict"/>
+    <property name="businessCodeId" column="business_code" access="field" type="java.lang.String"/>
+    <many-to-one insert="false" column="business_code" access="field" update="false" class="com.hzjava.monitorcenter.domain.BusinessCode" lazy="false" name="businessCode"/>
+    <property name="linkName" column="link_name" access="field" type="java.lang.String"/>
+    <property name="businessExchModelId" column="business_exch_model" access="field" type="java.lang.String"/>
+    <many-to-one insert="false" column="business_exch_model" access="field" update="false" class="com.hzjava.monitorcenter.domain.BusinessExchModel" lazy="false" name="businessExchModel"/>
+    <property name="businessAdmin" column="business_admin" access="field" type="java.lang.String"/>
+    <property name="adminPhone" column="admin_phone" access="field" type="java.lang.String"/>
+    <property name="adminEmail" column="admin_email" access="field" type="java.lang.String"/>
+    <property name="adminOtherPhone" column="admin_other_phone" access="field" type="java.lang.String"/>
+    <property name="authDepart" column="auth_depart" access="field" type="java.lang.Long"/>
+    <many-to-one insert="false" column="auth_depart" access="field" update="false" class="com.hzjava.monitorcenter.domain.Orgcode" lazy="false" name="authDepartDistrict"/>
+    <property name="authDate" column="auth_date" access="field" type="java.util.Date"/>
+    <property name="authSerial" column="auth_serial" access="field" type="java.lang.String"/>
+    <property name="authMaterial" column="auth_material" access="field" type="java.sql.Blob"/>
+    <property name="authMaterialFileName" column="auth_material_file_name" access="field" type="string"/>
+    <property name="registerDate" column="register_date" access="field" type="java.util.Date"/>
+    <property name="exchangeDirectionCode" column="exchange_direction" access="field" type="java.lang.String"/>
+    <many-to-one insert="false" column="exchange_direction" access="field" update="false" class="com.hzjava.monitorcenter.domain.ExchangeDirection" lazy="false" name="exchangeDirection"/>
+    <property name="exchProtocolCode" column="exch_protocol" access="field" type="java.lang.String"/>
+    <many-to-one insert="false" column="exch_protocol" access="field" update="false" class="com.hzjava.monitorcenter.domain.ProtocolType" lazy="false" name="exchProtocol"/>
+    <property name="isRealtime" column="is_realtime" access="field" type="java.lang.Boolean"/>
+    <property name="dayDataVolume" column="day_datavolume" access="field" type="java.lang.Long"/>
+    <property name="isApproved" column="is_approved" access="field" type="java.lang.Boolean"/>
+    <property name="approvedDepart" column="approved_depart" access="field" type="java.lang.Long"/>
+    <many-to-one insert="false" column="approved_depart" access="field" update="false" class="com.hzjava.monitorcenter.domain.Orgcode" lazy="false" name="approvedDepartDistrict"/>
+    <property name="tpGraph" column="tp_graph" access="field" type="java.sql.Blob"/>
+    <property name="tpGraphFileName" column="tp_graph_file_name" access="field" type="string"/>
+    <property name="businessProtocol" column="business_protocol" access="field" type="java.lang.String"/>
+    <property name="protocolDesc" column="protocol_desc" access="field" type="java.lang.String"/>
+    <property name="sourceIpRange" column="s_ip_range" access="field" type="java.lang.String"/>
+    <property name="sourcePortRange" column="s_port_range" access="field" type="java.lang.String"/>
+    <property name="destIpRange" column="d_ip_range" access="field" type="java.lang.String"/>
+    <property name="destPortRange" column="d_port_range" access="field" type="java.lang.String"/>
+    <property name="useDepart" column="use_depart" access="field" type="java.lang.Long"/>
+    <many-to-one insert="false" column="use_depart" access="field" update="false" class="com.hzjava.monitorcenter.domain.Orgcode" lazy="false" name="useDepartDistrict"/>
+    <property name="useDepartTypeId" column="use_depart_tpye" access="field" type="java.lang.String"/>
+    <many-to-one insert="false" column="use_depart_tpye" access="field" update="false" class="com.hzjava.monitorcenter.domain.UseDepartType" lazy="false" name="useDepartType"/>
+    <property name="useDepartAddress" column="use_depart_address" access="field" type="java.lang.String"/>
+    <property name="useDepartAdminName" column="use_depart_admin_name" access="field" type="java.lang.String"/>
+    <property name="useDepartAdminPhone" column="use_depart_admin_phone" access="field" type="java.lang.String"/>
+    <property name="useDepartAdminEmail" column="use_depart_admin_email" access="field" type="java.lang.String"/>
+    <property name="useDepartAdminOhterPhone" column="use_depart_admin_other_phone" access="field" type="java.lang.String"/>
+    <property name="terminalAmount" column="terminal_amount" access="field" type="java.lang.Long"/>
+    <property name="userAmount" column="user_amount" access="field" type="java.lang.Long"/>
+    <property name="enablereport" column="enablereport" access="field" type="java.lang.Boolean"/>
+  </class>
+</hibernate-mapping>

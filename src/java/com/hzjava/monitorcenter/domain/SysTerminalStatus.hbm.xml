@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="systerminalstatus" name="com.hzjava.monitorcenter.domain.SysTerminalStatus">
+    <id access="field" name="id" type="java.lang.Long" column="id">
+      <generator class="identity"/>
+    </id>
+    <property name="tScreenTime" column="tscreentime" access="field" type="java.util.Date"/>
+    <property name="accessUrl" column="accessurl" access="field" type="java.lang.String"/>
+    <property name="tPrintScreen" column="tprintscreen" access="field" type="java.lang.String"/>
+    <property name="isOnline" column="isonline" access="field" type="java.lang.String"/>
+    <property name="idTerminal" column="idterminal" access="field" type="java.lang.Long"/>
+    <property name="idSystem" column="idsystem" access="field" type="java.lang.String"/>
+    <property name="userId" column="userId" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="use_depart_type" name="com.hzjava.monitorcenter.domain.UseDepartType">
+    <id access="field" name="departCode" type="java.lang.String" column="depart_code">
+      <generator class="assigned"/>
+    </id>
+    <property name="departTypeDesc" column="depart_tpye_desc" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

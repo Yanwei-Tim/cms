@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="systerminalstatus_run" name="com.hzjava.monitorcenter.domain.SysTerminalStatusRun">
+    <id access="field" name="id" type="java.lang.Long" column="id">
+      <generator class="identity"/>
+    </id>
+    <property name="accessTime" column="auditDate" access="field" type="java.util.Date"/>
+    <property name="accessUrl" column="accessUrl" access="field" type="java.lang.String"/>
+    <property name="busName" column="busName" access="field" type="java.lang.String"/>
+    <property name="cardType" column="cardType" access="field" type="java.lang.String"/>
+    <property name="count" column="count" access="field" type="java.lang.Long"/>
+    <property name="flux" column="flux" access="field" type="java.lang.Long"/>
+    <property name="idTerminal" column="idTerminal" access="field" type="java.lang.Long"/>
+    <property name="policeNumber" column="policeNumber" access="field" type="java.lang.String"/>
+    <property name="userDepart" column="userDepart" access="field" type="java.lang.String"/>
+    <property name="userId" column="userId" access="field" type="java.lang.String"/>
+    <property name="userZone" column="userZone" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

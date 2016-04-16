@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="ext_link_type" name="com.hzjava.monitorcenter.domain.ExtLinkType">
+    <id access="field" name="linkTypeCode" type="java.lang.String" column="link_type_code">
+      <generator class="assigned"/>
+    </id>
+    <property name="linkTypeName" column="link_type_name" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.hzjava.monitorcenter.domain.EquipmentLine" table="equipmentline">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" />
+        </property>
+        <property name="x1" type="java.lang.String">
+            <column name="x1" length="50" />
+        </property>
+        <property name="y1" type="java.lang.String">
+            <column name="y1" length="50" />
+        </property>
+        <property name="x2" type="java.lang.String">
+            <column name="x2" length="50" />
+        </property>
+        <property name="y2" type="java.lang.String">
+            <column name="y2" length="50" />
+        </property>
+
+    </class>
+</hibernate-mapping>

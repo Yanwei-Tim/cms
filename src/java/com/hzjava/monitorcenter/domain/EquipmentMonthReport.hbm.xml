@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="equipment_month_report" name="com.hzjava.monitorcenter.domain.EquipmentMonthReport">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="equName" column="equ_name" access="field" type="java.lang.String"/>
+    <property name="reportDate" column="report_date" access="field" type="java.util.Date"/>
+    <property name="reportMonth" column="report_month" access="field" type="java.lang.Integer"/>
+    <property name="reportYear" column="report_year" access="field" type="java.lang.Integer"/>
+    <property name="breakdownCount" column="breakdown_count" access="field" type="java.lang.Long"/>
+    <property name="alertCount" column="alert_count" access="field" type="java.lang.Long"/>
+  </class>
+</hibernate-mapping>

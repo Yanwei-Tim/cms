@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>MonitorCenter</display-name>
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/BaseContext.xml,/WEB-INF/AppContext.xml,/WEB-INF/action-servlet.xml
+		</param-value>
+	</context-param>
+	
+	<filter>
+		<filter-name>encoding</filter-name>
+		<filter-class>
+			org.springframework.web.filter.CharacterEncodingFilter
+		</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>requestLogFilter</filter-name>
+		<filter-class>
+			cn.collin.commons.web.filter.RequestLogFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>requestLogFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	
+	<servlet>
+		<servlet-name>sitecontextloader</servlet-name>
+		<servlet-class>com.hzjava.monitorcenter.web.servlet.SiteContextLoaderServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			org.apache.struts.action.ActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>GenerateVerifyCodeImageServlet</servlet-name>
+		<servlet-class>
+			cn.collin.commons.web.servlet.ImageVerifyCodeServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TimerCountReportServlet</servlet-name>
+		<servlet-class>
+			com.hzjava.monitorcenter.web.servlet.TimerCountReportServlet
+		</servlet-class>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GenerateVerifyCodeImageServlet</servlet-name>
+		<url-pattern>/RandomCodeCtrl</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<session-config>
+		<session-timeout>-1</session-timeout>
+	</session-config>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>/tags/core</taglib-uri>
+            <taglib-location>/WEB-INF/c-1_0-rt.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>http://www.collin.cn/taglib/lbs</taglib-uri>
+            <taglib-location>/WEB-INF/lbs.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+
+	<resource-ref> 
+		<description>DB Connection</description> 
+		<res-ref-name>jdbc/monitorDS</res-ref-name> 
+		<res-type>javax.sql.DataSource</res-type> 
+		<res-auth>Container</res-auth> 
+	</resource-ref> 
+</web-app>

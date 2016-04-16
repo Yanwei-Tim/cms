@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <!--start merging from source: file:\E:\Eclipse\MonitorCenter2\merge\struts-data-sources.xml-->
+  <!--To add datasource definitions you have info for place them into file 
+                "struts-data-sources.xml" in defined merge directory
+                Define root element as <j:jelly  xmlns:j="jelly:core">-->
+  <!--end merging from source: file:\E:\Eclipse\MonitorCenter2\merge\struts-data-sources.xml-->
+  <form-beans>
+    <!--start merging from source: file:\E:\Eclipse\MonitorCenter2\merge\struts-forms.xml-->
+    <!--To add form bean definitions you have info for place them into file 
+                "struts-forms.xml" in defined merge directory
+                Define root element as <j:jelly  xmlns:j="jelly:core">-->
+    <!--end merging from source: file:\E:\Eclipse\MonitorCenter2\merge\struts-forms.xml-->
+      <form-bean name="sysTerminalAddManyForm" type="com.hzjava.monitorcenter.entity.FileForm"/>
+      <form-bean name="uploadWarForm" type="com.hzjava.monitorcenter.entity.FileForm"/>
+      <form-bean name="controlFormPanel" type="com.hzjava.monitorcenter.entity.FileForm"/>
+      <form-bean name="addform" type="com.hzjava.monitorcenter.entity.FileForm"/>
+  </form-beans>
+  <!--start merging from source: file:\E:\Eclipse\MonitorCenter2\merge\global-exceptions.xml-->
+  <!--To add global exception definitions you have info for place them into file 
+                "global-exceptions.xml" in defined merge directory
+                Define root element as <j:jelly  xmlns:j="jelly:core">-->
+  <!--end merging from source: file:\E:\Eclipse\MonitorCenter2\merge\global-exceptions.xml-->
+  <!--start merging from source: file:\E:\Eclipse\MonitorCenter2\merge\global-forwards.xml-->
+  <global-forwards>
+    <forward name="message" path="/WEB-INF/page/message.jsp"/>
+  </global-forwards>
+  <!--end merging from source: file:\E:\Eclipse\MonitorCenter2\merge\global-forwards.xml-->
+  <action-mappings>
+    <action type="com.hzjava.monitorcenter.web.action.AlertAdminAction" validate="true" parameter="m" scope="request" path="/alert"/>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/backupConf">
+      <forward name="detail" path="/WEB-INF/pages/conf/backupDetailJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/baseConf">
+      <forward name="detail" path="/WEB-INF/pages/conf/baseDetailJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/bizConf" attribute="addform" >
+      <forward name="indexJSON" path="/WEB-INF/pages/conf/bizIndexJSON.jsp"/>
+      <forward name="add" path="/WEB-INF/pages/conf/bizAdd.jsp"/>
+      <forward name="update" path="/WEB-INF/pages/conf/bizUpdate.jsp"/>
+      <forward name="detail" path="/WEB-INF/pages/conf/bizDetail.jsp"/>
+      <forward name="bizComboxJSON" path="/WEB-INF/pages/conf/bizComboxJSON.jsp"/>
+    </action>
+    <action type="com.hzjava.monitorcenter.web.action.BusinessReportAdminAction" validate="true" parameter="m" scope="request" path="/report"/>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/district">
+      <forward name="listJSON" path="/WEB-INF/pages/district/listJSON.jsp"/>
+      <forward name="cityList" path="/WEB-INF/pages/district/cityList.jsp"/>
+      <forward name="cityListShow" path="/WEB-INF/pages/district/cityListShow.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/sysClass">
+      <forward name="listJSON" path="/WEB-INF/pages/sysClass/listJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/epConf">
+      <forward name="indexJSON" path="/WEB-INF/pages/conf/epIndexJSON.jsp"/>
+      <forward name="add" path="/WEB-INF/pages/conf/epAdd.jsp"/>
+      <forward name="update" path="/WEB-INF/pages/conf/epUpdate.jsp"/>
+      <forward name="detail" path="/WEB-INF/pages/conf/epDetail.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/equConf">
+      <forward name="indexJSON" path="/WEB-INF/pages/conf/equIndexJSON.jsp"/>
+      <forward name="add" path="/WEB-INF/pages/conf/equAdd.jsp"/>
+      <forward name="update" path="/WEB-INF/pages/conf/equUpdate.jsp"/>
+      <forward name="detail" path="/WEB-INF/pages/conf/equDetail.jsp"/>
+      <forward name="equComboxJSON" path="/WEB-INF/pages/conf/equComboxJSON.jsp"/>
+    </action>
+    <action type="com.hzjava.monitorcenter.web.action.EquipmentReportAdminAction" validate="true" parameter="m" scope="request" path="/eqreport"/>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/extLinkConf">
+      <forward name="indexJSON" path="/WEB-INF/pages/conf/extLinkIndexJSON.jsp"/>
+      <forward name="add" path="/WEB-INF/pages/conf/extLinkAdd.jsp"/>
+      <forward name="update" path="/WEB-INF/pages/conf/extLinkUpdate.jsp"/>
+      <forward name="detail" path="/WEB-INF/pages/conf/extLinkDetail.jsp"/>
+    </action>
+    <action type="com.hzjava.monitorcenter.web.action.ForwardAction" validate="false" parameter="m" scope="request" path="/admin/forward">
+      <forward name="sysLog" 			path="/WEB-INF/pages/logs/sysLogGrid.jsp"/>
+      <forward name="userLog" 			path="/WEB-INF/pages/logs/userLogGrid.jsp"/>
+      <forward name="businessLog" 		path="/WEB-INF/pages/logs/businessLogGrid.jsp"/>
+      <forward name="equipmentLog" 		path="/WEB-INF/pages/logs/equipmentLogGrid.jsp"/>
+      <forward name="bdDayReport" 		path="/WEB-INF/pages/reports/bdDayReport.jsp"/>
+      <forward name="bdMonthReport" 	path="/WEB-INF/pages/reports/bdMonthReport.jsp"/>
+      <forward name="bdYearReport" 		path="/WEB-INF/pages/reports/bdYearReport.jsp"/>
+      <forward name="eqDayReport" 		path="/WEB-INF/pages/reports/eqDayReport.jsp"/>
+      <forward name="eqMonthReport" 	path="/WEB-INF/pages/reports/eqMonthReport.jsp"/>
+      <forward name="eqYearReport" 		path="/WEB-INF/pages/reports/eqYearReport.jsp"/>
+      <forward name="bsalert" 			path="/WEB-INF/pages/alert/bsalert.jsp"/>
+      <forward name="scalert" 			path="/WEB-INF/pages/alert/scalert.jsp"/>
+      <forward name="eqalert" 			path="/WEB-INF/pages/alert/eqalert.jsp"/>
+      <forward name="alertconfig" 		path="/WEB-INF/pages/alert/alertconfig.jsp"/>
+      <forward name="logConf" 		    path="/WEB-INF/pages/conf/log.jsp"/>
+      <forward name="sysruntime" 		path="/WEB-INF/pages/jlsb/sysruntimeGrid.jsp"/>
+      <forward name="sysabnormal" 		path="/WEB-INF/pages/jlsb/sysabnormalGrid.jsp"/>
+      <forward name="sysstatus" 		path="/WEB-INF/pages/jlsb/sysstatusGrid.jsp"/>
+      <forward name="sysbizstatus" 		path="/WEB-INF/pages/jlsb/sysbizstatusGrid.jsp"/>
+      <forward name="lowerSysruntime" 	path="/WEB-INF/pages/jlsb/lowerSysruntimeGrid.jsp"/>
+      <forward name="lowerSysabnormal" 	path="/WEB-INF/pages/jlsb/lowerSysabnormalGrid.jsp"/>
+      <forward name="lowerSysstatus" 	path="/WEB-INF/pages/jlsb/lowerSysstatusGrid.jsp"/>
+      <forward name="lowerSysbizstatus" path="/WEB-INF/pages/jlsb/lowerSysbizstatusGrid.jsp"/>
+      <forward name="parentEp" 			path="/WEB-INF/pages/jlsb/parentEp/ep.jsp"/>
+      <forward name="provinceEp" 		path="/WEB-INF/pages/jlsb/provinceEp/ep.jsp"/>
+      <forward name="sysTerminalConf" 			path="/WEB-INF/pages/sysTerminalConf/ep.jsp"/>
+      <forward name="sysTerminalStatusReport" 	path="/WEB-INF/pages/terminal/sysTerminalStatusRunReport.jsp"/>
+      <forward name="terminalOperAudit" 		path="/WEB-INF/pages/terminal/operAuditGrid.jsp"/>
+      <forward name="terminalAccessAudit" 		path="/WEB-INF/pages/terminal/accessAuditGrid.jsp"/>
+      <forward name="tenimalList" 				path="/WEB-INF/pages/terminal/tenimalListGrid.jsp"/>
+      <forward name="tenimalListOnline" 		path="/WEB-INF/pages/terminal/tenimalListOnlineGrid.jsp"/>
+      <forward name="terminalUserAccessReport" 	path="/WEB-INF/pages/terminal/terminalUserAccessReport.jsp"/>
+      <forward name="terminalAccessUrl" 		path="/WEB-INF/pages/terminal/terminalAccessUrl.jsp"/>
+      <forward name="abnormalReportDay" 		path="/WEB-INF/pages/abnormal/abnormalReportDay.jsp"/>
+      <forward name="abnormalReportMonth" 		path="/WEB-INF/pages/abnormal/abnormalReportMonth.jsp"/>
+      <forward name="abnormalReportYear" 		path="/WEB-INF/pages/abnormal/abnormalReportYear.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/intLinkConf">
+      <forward name="indexJSON" path="/WEB-INF/pages/conf/intLinkIndexJSON.jsp"/>
+      <forward name="add" path="/WEB-INF/pages/conf/intLinkAdd.jsp"/>
+      <forward name="update" path="/WEB-INF/pages/conf/intLinkUpdate.jsp"/>
+      <forward name="detail" path="/WEB-INF/pages/conf/intLinkDetail.jsp"/>
+    </action>
+    <action type="com.hzjava.monitorcenter.web.action.LogAdminAction" validate="true" parameter="m" scope="request" path="/log">
+      <forward name="sysLogJSON" path="/WEB-INF/pages/logs/sysLogJSON.jsp"/>
+      <forward name="equLogJSON" path="/WEB-INF/pages/logs/equLogJSON.jsp"/>
+      <forward name="bizLogJSON" path="/WEB-INF/pages/logs/bizLogJSON.jsp"/>
+      <forward name="userLogJSON" path="/WEB-INF/pages/logs/userLogJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/logConf">
+      <forward name="detail" path="/WEB-INF/pages/conf/logDetailJSON.jsp"/>
+      <forward name="backFiles" path="/WEB-INF/pages/conf/backFilesJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" scope="request" path="/login">
+      <forward name="login" path="/loginError.jsp"/>
+      <forward name="index" path="/" redirect="true"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" scope="request" path="/logout">
+      <forward name="success" path="/login.jsp" redirect="true"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/maConf">
+      <forward name="indexJSON" path="/WEB-INF/pages/conf/maIndexJSON.jsp"/>
+      <forward name="add" path="/WEB-INF/pages/conf/maAdd.jsp"/>
+      <forward name="update" path="/WEB-INF/pages/conf/maUpdate.jsp"/>
+      <forward name="detail" path="/WEB-INF/pages/conf/maDetail.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/pwd"/>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/roleAdmin">
+      <forward name="index" path="/WEB-INF/pages/user/roleIndex.jsp"/>
+      <forward name="detail" path="/WEB-INF/pages/user/roleDetail.jsp"/>
+      <forward name="addRole" path="/WEB-INF/pages/user/roleAdd.jsp"/>
+      <forward name="updateRole" path="/WEB-INF/pages/user/roleUpdate.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/runMonitor">
+      <forward name="terminalIndexJSON" path="/WEB-INF/pages/monitor/terminalIndexJSON.jsp"/>
+      <forward name="bizIndexJSON" path="/WEB-INF/pages/monitor/bizIndexJSON.jsp"/>
+      <forward name="equIndexJSON" path="/WEB-INF/pages/monitor/equIndexJSON.jsp"/>
+      <forward name="equDetail" path="/WEB-INF/pages/monitor/equDetail.jsp"/>
+      <forward name="bizStat" path="/WEB-INF/pages/monitor/bizStat.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/sbpzConf">
+      <forward name="indexJSON" path="/WEB-INF/pages/conf/sbpzIndexJSON.jsp"/>
+      <forward name="detailJSON" path="/WEB-INF/pages/conf/sbpzDetailJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/userAdmin">
+      <forward name="index" path="/WEB-INF/pages/user/userIndex.jsp"/>
+      <forward name="detail" path="/WEB-INF/pages/user/userDetail.jsp"/>
+      <forward name="addUser" path="/WEB-INF/pages/user/userAdd.jsp"/>
+      <forward name="updateUser" path="/WEB-INF/pages/user/userUpdate.jsp"/>
+      <forward name="userComboxJSON" path="/WEB-INF/pages/user/userComboxJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/lowerSysabnormal">
+      <forward name="index" path="/WEB-INF/pages/jlsb/lowerSysabnormalJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/lowerSysbizstatus">
+      <forward name="index" path="/WEB-INF/pages/jlsb/lowerSysbizstatusJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/lowerSysruntime">
+      <forward name="index" path="/WEB-INF/pages/jlsb/lowerSysruntimeJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/lowerSysstatus">
+      <forward name="index" path="/WEB-INF/pages/jlsb/lowerSysstatusJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/parentEpConf">
+      <forward name="indexJSON" path="/WEB-INF/pages/jlsb/parentEp/epIndexJSON.jsp"/>
+      <forward name="add" path="/WEB-INF/pages/jlsb/parentEp/epAdd.jsp"/>
+      <forward name="update" path="/WEB-INF/pages/jlsb/parentEp/epUpdate.jsp"/>
+      <forward name="detail" path="/WEB-INF/pages/jlsb/parentEp/epDetail.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/provinceEpConf">
+      <forward name="indexJSON" path="/WEB-INF/pages/jlsb/provinceEp/epIndexJSON.jsp"/>
+      <forward name="add" path="/WEB-INF/pages/jlsb/provinceEp/epAdd.jsp"/>
+      <forward name="update" path="/WEB-INF/pages/jlsb/provinceEp/epUpdate.jsp"/>
+      <forward name="detail" path="/WEB-INF/pages/jlsb/provinceEp/epDetail.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/sysabnormal">
+      <forward name="index" path="/WEB-INF/pages/jlsb/sysabnormalJSON.jsp"/>
+      <forward name="comboEvent" path=""></forward>
+      <forward name="comboObject" path=""></forward>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/sysbizstatus">
+      <forward name="index" path="/WEB-INF/pages/jlsb/sysbizstatusJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/sysruntime">
+      <forward name="index" path="/WEB-INF/pages/jlsb/sysruntimeJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/sysstatus">
+      <forward name="index" path="/WEB-INF/pages/jlsb/sysstatusJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false" parameter="m" scope="request" path="/sysTerminalConf" attribute="sysTerminalAddManyForm">
+      <forward name="indexJSON" path="/WEB-INF/pages/sysTerminalConf/epIndexJSON.jsp"/>
+      <forward name="add" path="/WEB-INF/pages/sysTerminalConf/epAdd.jsp"/>
+      <forward name="update" path="/WEB-INF/pages/sysTerminalConf/epUpdate.jsp"/>
+      <forward name="detail" path="/WEB-INF/pages/sysTerminalConf/epDetail.jsp"/>
+      <forward name="epComboxJSON" path="/WEB-INF/pages/sysTerminalConf/epComboxJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/tenimalListAction">
+      <forward name="index" path=""/>
+      <forward name="cardTypeJSON" path="/WEB-INF/pages/terminal/cardTypeJSON.jsp"/>
+      <forward name="indexOnline" path=""/>
+      <forward name="printScreen" path=""/>
+      <forward name="revokeCert" path=""/>
+      <forward name="showBlock" path=""/>
+      <forward name="releaseBlock" path=""/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/terminalAccessUrl">
+    	<forward name="index" path=""></forward>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/terminalAccessAudit">
+      <forward name="index" path="/WEB-INF/pages/terminal/accessAuditJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/terminalAccessAuditReport">
+      <forward name="index" path="/WEB-INF/pages/terminal/accessAuditReportJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/terminalOperAudit">
+      <forward name="index" path="/WEB-INF/pages/terminal/operAuditJSON.jsp"/>
+    </action>
+    <action type="com.hzjava.monitorcenter.web.action.jlsb.UplinkAction" validate="true" parameter="m" scope="request" path="/pages/conf/uplink">
+  		<forward name="uplink" path=""></forward>
+  	</action>
+  	<action type="org.springframework.web.struts.DelegatingActionProxy"
+              validate="false" parameter="m" scope="request" path="/sysControlRulesInf" attribute="controlFormPanel">
+  	</action>
+  	<action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/pages/sysinf/sysStrategyInf">
+  		<forward name="read" path=""></forward>
+  		<forward name="update" path=""></forward>
+  		<forward name="insert" path=""></forward>
+  		<forward name="delete" path=""></forward>
+  	</action>
+  	<action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/pages/sysinf/sysAbnormalInf">
+  		<forward name="read" path=""></forward>
+  		<forward name="update" path=""></forward>
+  		<forward name="insert" path=""></forward>
+  		<forward name="delete" path=""></forward>
+  	</action>
+  	<action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/sysTerminalStatusRunReport">
+      <forward name="index" path="/WEB-INF/pages/terminal/sysTerminalStatusRunReportJSON.jsp"/>
+      <forward name="comboIdTerminal" path="/WEB-INF/pages/terminal/comboIdTerminalJSON.jsp"/>
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/pages/system/boot">
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/pages/system/interfaceManager">
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy" validate="false" parameter="m" scope="request" path="/pages/system/configManager">
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false" parameter="m" scope="request" path="/upgradeVersion" attribute="uploadWarForm">
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false" parameter="m" scope="request" path="/download">
+    </action>
+    <action type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false" parameter="m" scope="request" path="/sysQueryService">
+    </action>
+      <!--gdw  weiguibiao -->
+      <action type="org.springframework.web.struts.DelegatingActionProxy"
+              validate="false" parameter="m" scope="request" path="/sysAbnormalService">
+      </action>
+      <action type="org.springframework.web.struts.DelegatingActionProxy"
+              validate="false" parameter="m" scope="request" path="/orgcode">
+      </action>
+      <action type="org.springframework.web.struts.DelegatingActionProxy"
+              validate="false" parameter="m" scope="request" path="/snmpOid">
+          <forward name="index" path="/WEB-INF/pages/conf/snmpOidJSON.jsp"/>
+      </action>
+
+    <!--start merging from source: file:\E:\Eclipse\MonitorCenter2\merge\struts-actions.xml-->
+    <!--To add global action definitions you have info for place them into file 
+                "struts-actions.xml" in defined merge directory
+                Define root element as <j:jelly  xmlns:j="jelly:core">-->
+    <!--end merging from source: file:\E:\Eclipse\MonitorCenter2\merge\struts-actions.xml-->
+  </action-mappings>
+  <!--start merging from source: file:\E:\Eclipse\MonitorCenter2\merge\struts-controller.xml-->
+  <!--To add controller definitions you have info for, place them into file 
+                "struts-controller.xml" in defined merge directory
+                Define root element as <j:jelly  xmlns:j="jelly:core">-->
+  <!--end merging from source: file:\E:\Eclipse\MonitorCenter2\merge\struts-controller.xml-->
+  <!--start merging from source: file:\E:\Eclipse\MonitorCenter2\merge\struts-message-resources.xml-->
+  <!--To add message resources definitions you have info for, place them into file 
+                "struts-message-resources.xml" in defined merge directory
+                Define root element as <j:jelly  xmlns:j="jelly:core">-->
+  <!--end merging from source: file:\E:\Eclipse\MonitorCenter2\merge\struts-message-resources.xml-->
+  <!--start merging from source: file:\E:\Eclipse\MonitorCenter2\merge\struts-plugins.xml-->
+  <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+    <set-property value="/WEB-INF/action-servlet.xml" property="contextConfigLocation"/>
+  </plug-in>
+  <!--end merging from source: file:\E:\Eclipse\MonitorCenter2\merge\struts-plugins.xml-->
+</struts-config>

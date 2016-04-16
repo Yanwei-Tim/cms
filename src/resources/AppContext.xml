@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName" default-lazy-init="false">
+	<bean id="sysHierInfoDao"
+		class="com.hzjava.monitorcenter.dao.BusinessCodeDaoImpl" parent="daoTemplate" />
+	<bean id="commonDao"
+		class="com.hzjava.monitorcenter.dao.CommonDaoImpl" parent="daoTemplate" />
+		
+	<bean id="accountDao"
+		class="com.hzjava.monitorcenter.dao.AccountDaoImpl" parent="daoTemplate" />
+	<bean id="alertDao"
+		class="com.hzjava.monitorcenter.dao.AlertDaoImpl" parent="daoTemplate" />
+	<bean id="roleDao"
+		class="com.hzjava.monitorcenter.dao.RoleDaoImpl" parent="daoTemplate" />
+	<bean id="businessCodeDao"
+		class="com.hzjava.monitorcenter.dao.BusinessCodeDaoImpl" parent="daoTemplate" />
+	<bean id="businessExceptAlertDao"
+		class="com.hzjava.monitorcenter.dao.BusinessExceptAlertDaoImpl" parent="daoTemplate" />
+	<bean id="businessExceptCodeDao"
+		class="com.hzjava.monitorcenter.dao.BusinessExceptCodeDaoImpl" parent="daoTemplate" />
+	<bean id="businessExchModelDao"
+		class="com.hzjava.monitorcenter.dao.BusinessExchModelDaoImpl" parent="daoTemplate" />
+	<bean id="businessHourReportDao"
+		class="com.hzjava.monitorcenter.dao.BusinessHourReportDaoImpl" parent="daoTemplate" />
+	<bean id="businessLogDao"
+		class="com.hzjava.monitorcenter.dao.BusinessLogDaoImpl" parent="daoTemplate" />
+	<bean id="businessRegisterDao"
+		class="com.hzjava.monitorcenter.dao.BusinessRegisterDaoImpl" parent="daoTemplate" />
+	<bean id="businessReportDao"
+		class="com.hzjava.monitorcenter.dao.BusinessReportDaoImpl" parent="daoTemplate" />
+	<bean id="confDao"
+		class="com.hzjava.monitorcenter.dao.ConfDaoImpl" parent="daoTemplate" />	
+	<bean id="equipmentDao"
+		class="com.hzjava.monitorcenter.dao.EquipmentDaoImpl" parent="daoTemplate" />
+	<bean id="equipmentHourReportDao"
+		class="com.hzjava.monitorcenter.dao.EquipmentHourReportDaoImpl" parent="daoTemplate" />
+	<bean id="equipmentLogDao"
+		class="com.hzjava.monitorcenter.dao.EquipmentLogDaoImpl" parent="daoTemplate" />
+	<bean id="equipmentTypeDao"
+		class="com.hzjava.monitorcenter.dao.EquipmentTypeDaoImpl" parent="daoTemplate" />
+    <bean id="equipmentTypesDao"
+		class="com.hzjava.monitorcenter.dao.EquipmentTypesDaoImpl" parent="daoTemplate" />
+	<bean id="exchangeDirectionDao"
+		class="com.hzjava.monitorcenter.dao.ExchangeDirectionDaoImpl" parent="daoTemplate" />
+	<bean id="exchangePlatformDao"
+		class="com.hzjava.monitorcenter.dao.ExchangePlatformDaoImpl" parent="daoTemplate" />
+	<bean id="extLinkDao"
+		class="com.hzjava.monitorcenter.dao.ExtLinkDaoImpl" parent="daoTemplate" />
+	<bean id="extLinkPropertyDao"
+		class="com.hzjava.monitorcenter.dao.ExtLinkPropertyDaoImpl" parent="daoTemplate" />
+	<bean id="extLinkTypeDao"
+		class="com.hzjava.monitorcenter.dao.ExtLinkTypeDaoImpl" parent="daoTemplate" />
+	<bean id="intLinkDao"
+		class="com.hzjava.monitorcenter.dao.IntLinkDaoImpl" parent="daoTemplate" />
+	<bean id="jbqkDao"
+		class="com.hzjava.monitorcenter.dao.JbqkDaoImpl" parent="daoTemplate" />
+    <bean id="orgcodeDao"
+		class="com.hzjava.monitorcenter.dao.OrgcodeDaoImpl" parent="daoTemplate" />
+	<bean id="monitorAgentDao"
+		class="com.hzjava.monitorcenter.dao.MonitorAgentDaoImpl" parent="daoTemplate" />
+	<bean id="permissionDao"
+		class="com.hzjava.monitorcenter.dao.PermissionDaoImpl" parent="daoTemplate" />
+	<bean id="platformFunctionModuleDao"
+		class="com.hzjava.monitorcenter.dao.PlatformFunctionModuleDaoImpl" parent="daoTemplate" />
+	<bean id="platformRunningCodeDao"
+		class="com.hzjava.monitorcenter.dao.PlatformRunningCodeDaoImpl" parent="daoTemplate" />
+	<bean id="protocolTypeDao"
+		class="com.hzjava.monitorcenter.dao.ProtocolTypeDaoImpl" parent="daoTemplate" />
+	<bean id="sbpzDao"
+		class="com.hzjava.monitorcenter.dao.SbpzDaoImpl" parent="daoTemplate" />
+	<bean id="securityEventCodeDao"
+		class="com.hzjava.monitorcenter.dao.SecurityEventCodeDaoImpl" parent="daoTemplate" />
+	<bean id="sysLogDao"
+		class="com.hzjava.monitorcenter.dao.SysLogDaoImpl" parent="daoTemplate" />
+	<bean id="terminalAuthCodeDao"
+		class="com.hzjava.monitorcenter.dao.TerminalAuthCodeDaoImpl" parent="daoTemplate" />
+	<bean id="useDepartTypeDao"
+		class="com.hzjava.monitorcenter.dao.UseDepartTypeDaoImpl" parent="daoTemplate" />
+	<bean id="userOperLogDao"
+		class="com.hzjava.monitorcenter.dao.UserOperLogDaoImpl" parent="daoTemplate" />
+	<!-- version2 add by xiangqi -->
+	<bean id="sysruntimeDao"
+		class="com.hzjava.monitorcenter.dao.SysruntimeDaoImpl" parent="daoTemplate" />
+	<bean id="sysabnormalDao"
+		class="com.hzjava.monitorcenter.dao.SysabnormalDaoImpl" parent="daoTemplate" />
+	<bean id="sysabnormalEventCodeDao"
+		class="com.hzjava.monitorcenter.dao.SysabnormalEventCodeDaoImpl" parent="daoTemplate"/>
+	<bean id="sysabnormalObjectTypeDao"
+		class="com.hzjava.monitorcenter.dao.SysabnormalObjectTypeDaoImpl" parent="daoTemplate"/>
+	<bean id="sysbizstatusDao"
+		class="com.hzjava.monitorcenter.dao.SysbizstatusDaoImpl" parent="daoTemplate" />
+	<bean id="sysstatusDao"
+		class="com.hzjava.monitorcenter.dao.SysstatusDaoImpl" parent="daoTemplate" />
+	<bean id="lowerSysruntimeDao"
+		class="com.hzjava.monitorcenter.dao.LowerSysruntimeDaoImpl" parent="daoTemplate" />
+	<bean id="lowerSysabnormalDao"
+		class="com.hzjava.monitorcenter.dao.LowerSysabnormalDaoImpl" parent="daoTemplate" />
+	<bean id="lowerSysbizstatusDao"
+		class="com.hzjava.monitorcenter.dao.LowerSysbizstatusDaoImpl" parent="daoTemplate" />
+	<bean id="lowerSysstatusDao"
+		class="com.hzjava.monitorcenter.dao.LowerSysstatusDaoImpl" parent="daoTemplate" />
+	<bean id="parentExchangePlatformDao"
+		class="com.hzjava.monitorcenter.dao.ParentExchangePlatformDaoImpl" parent="daoTemplate" />
+	<bean id="provinceExchangePlatformDao"
+		class="com.hzjava.monitorcenter.dao.ProvinceExchangePlatformDaoImpl" parent="daoTemplate" />
+	<!-- 码表通用dao -->
+	<bean id="codeTableDao"
+		class="com.hzjava.monitorcenter.dao.CodeTableDaoImpl" parent="daoTemplate" />
+	<bean id="sysTerminalInfoDao"
+		class="com.hzjava.monitorcenter.dao.SysTerminalInfoDaoImpl" parent="daoTemplate" />
+	<bean id="terminalOperAuditDao"
+		class="com.hzjava.monitorcenter.dao.TerminalOperAuditDaoImpl" parent="daoTemplate" />
+	<bean id="terminalAccessAuditDao"
+		class="com.hzjava.monitorcenter.dao.TerminalAccessAuditDaoImpl" parent="daoTemplate" />
+	<bean id="terminalAccessAuditReportDao"
+		class="com.hzjava.monitorcenter.dao.TerminalAccessAuditReportDaoImpl" parent="daoTemplate"/>	
+
+	<bean id="districtDao"
+		class="com.hzjava.monitorcenter.dao.DistrictDaoImpl" parent="daoTemplate" />
+		
+
+	<bean id="tenimalDao"
+		class="com.hzjava.monitorcenter.dao.TenimalDaoImpl" parent="daoTemplate" />
+    <bean id="terminalAddressDao"
+          class="com.hzjava.monitorcenter.dao.TerminalAddressDaoImpl" parent="daoTemplate"/>
+	<bean id="sysClassDao"
+		class="com.hzjava.monitorcenter.dao.SysClassDaoImpl" parent="daoTemplate" />	
+	<bean id="sysControlRulesInfDao"
+		class="com.hzjava.monitorcenter.dao.SysControlRulesInfDaoImpl" parent="daoTemplate"/>
+	<bean id="sysStrategyInfDao"
+		class="com.hzjava.monitorcenter.dao.SysStrategyInfDaoImpl" parent="daoTemplate"/>
+	<bean id="sysAbnormalInfDao"
+		class="com.hzjava.monitorcenter.dao.SysAbnormalInfDaoImpl" parent="daoTemplate"/>
+	<bean id="sysTerminalStatusRunDao"
+		class="com.hzjava.monitorcenter.dao.SysTerminalStatusRunDaoImpl" parent="daoTemplate"/>
+	<bean id="terminalAccessUrlDao"
+		class="com.hzjava.monitorcenter.dao.TerminalAccessUrlDaoImpl" parent="daoTemplate"/>
+	<bean id="sysTerminalStatusRunReportDao"
+		class="com.hzjava.monitorcenter.dao.SysTerminalStatusRunReportDaoImpl" parent="daoTemplate"/>
+	<bean id="sysTerminalStatusDao"
+		class="com.hzjava.monitorcenter.dao.SysTerminalStatusDaoImpl" parent="daoTemplate"/>
+    <bean id="terminalOutLinkDao"
+          class="com.hzjava.monitorcenter.dao.TerminalOutLinkDaoImpl" parent="daoTemplate"/>
+    <bean id="sysDelServiceDao"
+          class="com.hzjava.monitorcenter.dao.SysDelServiceDaoImpl" parent="daoTemplate" />
+    <bean id="sysQueryServiceDao"
+          class="com.hzjava.monitorcenter.dao.SysQueryServiceDaoImpl" parent="daoTemplate" />
+    <bean id="snmpOidDao"
+          class="com.hzjava.monitorcenter.dao.SnmpOidDaoImpl" parent="daoTemplate" />
+	<!-- services -->
+	<bean id="logService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.LogServiceImpl">
+				<property name="sysLogDao">
+					<ref local="sysLogDao" />
+				</property>
+				<property name="userOperLogDao">
+					<ref local="userOperLogDao" />
+				</property>
+				<property name="businessLogDao">
+					<ref local="businessLogDao" />
+				</property>
+				<property name="equipmentLogDao">
+					<ref local="equipmentLogDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="loginService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.LoginServiceImpl">
+				<property name="accountDao">
+					<ref local="accountDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="businessReportService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.BusinessReportServiceImpl">
+				<property name="businessHourReportDao">
+					<ref local="businessHourReportDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="equipmentReportService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.EquipmentReportServiceImpl">
+				<property name="equipmentHourReportDao">
+					<ref local="equipmentHourReportDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="alertService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.AlertServiceImpl">
+				<property name="alertDao">
+					<ref local="alertDao" />
+				</property>
+				<property name="businessExceptCodeDao">
+					<ref local="businessExceptCodeDao" />
+				</property>
+				<property name="securityEventCodeDao">
+					<ref local="securityEventCodeDao" />
+				</property>
+                <property name="equipmentLogDao">
+                    <ref local="equipmentLogDao"/>
+                </property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="userService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.UserServiceImpl">
+				<property name="accountDao">
+					<ref local="accountDao" />
+				</property>
+				<property name="roleDao">
+					<ref local="roleDao" />
+				</property>
+				<property name="permissionDao">
+					<ref local="permissionDao" />
+				</property>
+				<property name="userOperLogDao">
+					<ref local="userOperLogDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="runMonitorService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.RunMonitorServiceImpl">
+				<property name="businessRegisterDao">
+					<ref local="businessRegisterDao" />
+				</property>
+				<property name="businessReportDao">
+					<ref local="businessReportDao" />
+				</property>
+				<property name="equipmentDao">
+					<ref local="equipmentDao" />
+				</property>
+				<property name="businessHourReportDao">
+					<ref local="businessHourReportDao" />
+				</property>
+				<property name="sysTerminalStatusRunDao">
+					<ref local="sysTerminalStatusRunDao"/>
+				</property>
+				<property name="codeTableDao">
+					<ref local="codeTableDao" />
+				</property>
+				<property name="sysClassDao">
+					<ref local="sysClassDao" />
+				</property>
+				<property name="districtDao">
+					<ref local="districtDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="confService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.ConfServiceImpl">
+				<property name="businessRegisterDao">
+					<ref local="businessRegisterDao" />
+				</property>
+				<property name="businessCodeDao">
+					<ref local="businessCodeDao" />
+				</property>
+				<property name="businessExchModelDao">
+					<ref local="businessExchModelDao" />
+				</property>
+				<property name="equipmentTypeDao">
+					<ref local="equipmentTypeDao" />
+				</property>
+                <property name="equipmentTypesDao">
+                    <ref local="equipmentTypesDao" />
+                </property>
+				<property name="equipmentDao">
+					<ref local="equipmentDao" />
+				</property>
+				<property name="exchangeDirectionDao">
+					<ref local="exchangeDirectionDao" />
+				</property>
+				<property name="protocolTypeDao">
+					<ref local="protocolTypeDao" />
+				</property>
+				<property name="useDepartTypeDao">
+					<ref local="useDepartTypeDao" />
+				</property>
+				<property name="monitorAgentDao">
+					<ref local="monitorAgentDao" />
+				</property>
+				<property name="exchangePlatformDao">
+					<ref local="exchangePlatformDao" />
+				</property>
+				<property name="extLinkDao">
+					<ref local="extLinkDao" />
+				</property>
+				<property name="intLinkDao">
+					<ref local="intLinkDao" />
+				</property>
+				<property name="userOperLogDao">
+					<ref local="userOperLogDao" />
+				</property>
+				<property name="sbpzDao">
+					<ref local="sbpzDao" />
+				</property>
+                <property name="terminalOutLinkDao">
+                    <ref local="terminalOutLinkDao"/>
+                </property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="backupThread" class="com.hzjava.monitorcenter.service.BackUpThread" init-method="init" />
+	
+	<!-- version2 add by xiangqi -->
+	<bean id="jlsbService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.JlsbServiceImpl">
+				<property name="sysruntimeDao">
+					<ref local="sysruntimeDao" />
+				</property>
+				<property name="sysabnormalDao">
+					<ref local="sysabnormalDao" />
+				</property>
+				<property name="sysabnormalEventCodeDao">
+					<ref local="sysabnormalEventCodeDao" />
+				</property>
+				<property name="sysabnormalObjectTypeDao">
+					<ref local="sysabnormalObjectTypeDao" />
+				</property>
+				<property name="sysbizstatusDao">
+					<ref local="sysbizstatusDao" />
+				</property>
+				<property name="sysstatusDao">
+					<ref local="sysstatusDao" />
+				</property>
+				<property name="lowerSysruntimeDao">
+					<ref local="lowerSysruntimeDao" />
+				</property>
+				<property name="lowerSysabnormalDao">
+					<ref local="lowerSysabnormalDao" />
+				</property>
+				<property name="lowerSysbizstatusDao">
+					<ref local="lowerSysbizstatusDao" />
+				</property>
+				<property name="lowerSysstatusDao">
+					<ref local="lowerSysstatusDao" />
+				</property>
+				<property name="provinceExchangePlatformDao">
+					<ref local="provinceExchangePlatformDao" />
+				</property>
+				<property name="parentExchangePlatformDao">
+					<ref local="parentExchangePlatformDao" />
+				</property>
+                <property name="sysQueryServiceDao" ref="sysQueryServiceDao"/>
+                <property name="sysDelServiceDao" ref="sysDelServiceDao"/>
+			</bean>
+		</property>
+	</bean>
+	<bean id="terminalService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.TerminalServiceImpl">
+				<property name="codeTableDao">
+					<ref local="codeTableDao" />
+				</property>
+				<property name="terminalOperAuditDao">
+					<ref local="terminalOperAuditDao" />
+				</property>
+				<property name="terminalAccessAuditDao">
+					<ref local="terminalAccessAuditDao" />
+				</property>
+				<property name="tenimalDao">
+					<ref local="tenimalDao" />
+				</property>
+				<property name="districtDao" ref="districtDao"/>
+				<property name="sysClassDao" ref="sysClassDao"/>
+				<property name="terminalAccessAuditReportDao" ref="terminalAccessAuditReportDao"/>
+				<property name="sysTerminalStatusRunReportDao" ref="sysTerminalStatusRunReportDao"></property>
+				<property name="sysTerminalStatusRunDao" ref="sysTerminalStatusRunDao"></property>
+				<property name="sysTerminalStatusDao" ref="sysTerminalStatusDao"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="sysTerminalService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.SysTerminalServiceImpl">
+				<property name="sysTerminalInfoDao">
+					<ref local="sysTerminalInfoDao" />
+				</property>
+				<property name="commonDao">
+					<ref local="commonDao" />
+				</property>
+				<property name="userOperLogDao">
+					<ref local="userOperLogDao" />
+				</property>
+				<property name="districtDao">
+					<ref local="districtDao"/>
+				</property>
+				<property name="sysClassDao">
+					<ref local="sysClassDao"/>
+				</property>
+                <property name="terminalAddressDao">
+                    <ref local="terminalAddressDao"/>
+                </property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="codeTableService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.CodeTableServiceImpl">
+				<property name="codeTableDao">
+					<ref local="codeTableDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="districtService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.DistrictServiceImpl">
+				<property name="districtDao">
+					<ref local="districtDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="sysClassService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.SysClassServiceImpl">
+				<property name="sysClassDao">
+					<ref local="sysClassDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="sysControlRulesInfService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.SysControlRulesInfServiceImpl">
+				<property name="sysControlRulesInfDao">
+					<ref local="sysControlRulesInfDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="sysStrategyService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.SysStrategyServiceImpl">
+				<property name="sysStrategyInfDao">
+					<ref local="sysStrategyInfDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="sysAbnormalInfService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.SysAbnormalInfServiceImpl">
+				<property name="sysAbnormalInfDao">
+					<ref local="sysAbnormalInfDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="sysabnormalEventCodeService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.SysabnormalEventCodeServiceImpl">
+				<property name="sysabnormalEventCodeDao">
+					<ref local="sysabnormalEventCodeDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="sysabnormalObjectTypeService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.SysabnormalObjectTypeServiceImpl">
+				<property name="sysabnormalObjectTypeDao">
+					<ref local="sysabnormalObjectTypeDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="terminalAccessUrlService" parent="transactionalTemplate">
+		<property name="target">
+			<bean class="com.hzjava.monitorcenter.service.TerminalAccessUrlServiceImpl">
+				<property name="terminalAccessUrlDao" ref="terminalAccessUrlDao"></property>
+			</bean>
+		</property>
+	</bean>
+    <!--GDW weiguibiao-->
+    <bean id="sysAbnormalService" parent="transactionalTemplate">
+        <property name="target">
+            <bean class="com.hzjava.monitorcenter.service.SysAbnormalServiceImpl">
+                <property name="sysabnormalDao" ref="sysabnormalDao"></property>
+                <property name="jbqkDao" ref="jbqkDao"></property>
+            </bean>
+        </property>
+    </bean>
+    <bean id="orgcodeService" parent="transactionalTemplate">
+        <property name="target">
+            <bean class="com.hzjava.monitorcenter.service.OrgcodeServiceImpl">
+                <property name="orgcodeDao" ref="orgcodeDao"></property>
+                <property name="jbqkDao" ref="jbqkDao"></property>
+                <property name="bemDao" ref="businessExchModelDao"></property>
+                <property name="protocolTypeDao" ref="protocolTypeDao"></property>
+                <property name="useDepartTypeDao" ref="useDepartTypeDao"></property>
+                <property name="exchangeDirectionDao" ref="exchangeDirectionDao"></property>
+            </bean>
+        </property>
+    </bean>
+    <bean id="snmpOidService" parent="transactionalTemplate">
+        <property name="target">
+            <bean class="com.hzjava.monitorcenter.service.SnmpOidServiceImpl">
+                <property name="snmpOidDao" ref="snmpOidDao"></property>
+            </bean>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="jbqk" name="com.hzjava.monitorcenter.domain.Jbqk">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="platformName" column="platform_name" access="field" type="java.lang.String"/>
+    <property name="platformId" column="platform_id" access="field" type="java.lang.String"/>
+    <property name="systemClass" column="system_class" access="field" type="java.lang.String"/>
+    <property name="address" column="address" access="field" type="java.lang.String"/>
+    <property name="fzrName" column="fzr_name" access="field" type="java.lang.String"/>
+    <property name="fzrPhone" column="fzr_phone" access="field" type="java.lang.String"/>
+    <property name="fzrEmail" column="fzr_email" access="field" type="java.lang.String"/>
+    <property name="fzrOhterPhone" column="fzr_other_phone" access="field" type="java.lang.String"/>
+    <property name="jksysIp" column="jksys_ip" access="field" type="java.lang.String"/>
+    <property name="jksysMac" column="jksys_mac" access="field" type="java.lang.String"/>
+    <property name="jsdw" column="jsdw" access="field" type="java.lang.Long"/>
+    <property name="zycjdw" column="zycjdw" access="field" type="java.lang.String"/>
+    <property name="jsDay" column="js_day" access="field" type="java.util.Date"/>
+    <property name="bmxy" column="bmxy" access="field" type="java.lang.String"/>
+    <property name="spdw" column="spdw" access="field" type="java.lang.Long"/>
+    <property name="spDay" column="sp_day" access="field" type="java.util.Date"/>
+    <property name="spph" column="spph" access="field" type="java.lang.String"/>
+    <property name="spcl" column="spcl" access="field" type="java.sql.Blob"/>
+    <property name="spclFileName" column="spcl_file_name" access="field" type="string"/>
+    <property name="technologySolution" column="Technology_solution" access="field" type="java.sql.Blob"/>
+    <property name="technologySolutionFileName" column="technology_solution_file_name" access="field" type="string"/>
+    <property name="confidentialAgreement" column="Confidential_Agreement" access="field" type="java.sql.Blob"/>
+    <property name="confidentialAgreementFileName" column="confidential_agreement_file_name" access="field" type="string"/>
+    <property name="mainComp" column="main_comp" access="field" type="java.lang.Long"/>
+    <property name="maintainerName" column="maintainer_name" access="field" type="java.lang.String"/>
+    <property name="maintainerPhone" column="maintainer_phone" access="field" type="java.lang.String"/>
+    <property name="maintainerEmail" column="maintainer_email" access="field" type="java.lang.String"/>
+    <property name="maintainerOhterPhone" column="maintainer_other_phone" access="field" type="java.lang.String"/>
+    <property name="platformTp" column="platform_tp" access="field" type="java.sql.Blob"/>
+    <property name="platformTpFileName" column="platform_tp_file_name" access="field" type="string"/>
+    <many-to-one insert="false" column="jsdw" access="field" update="false" class="com.hzjava.monitorcenter.domain.Orgcode" lazy="false" name="districtJsdw"/>
+    <many-to-one insert="false" column="spdw" access="field" update="false" class="com.hzjava.monitorcenter.domain.Orgcode" lazy="false" name="districtSpdw"/>
+    <many-to-one insert="false" column="main_comp" access="field" update="false" class="com.hzjava.monitorcenter.domain.Orgcode" lazy="false" name="districtMainComp"/>
+    <many-to-one insert="false" column="system_class" access="field" update="false" class="com.hzjava.monitorcenter.domain.SysClass" lazy="false" name="sysClass"></many-to-one>
+  </class>
+</hibernate-mapping>

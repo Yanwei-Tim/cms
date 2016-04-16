@@ -1,0 +1,41 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Charts</title>
+    <link rel="stylesheet" type="text/css" href="../../js/ext/resources/css/ext-all.css" />
+    <script type="text/javascript" src="../../js/ext/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../../js/ext/ext-all.js"></script>
+    <script type="text/javascript">
+        Ext.onReady(function() {
+            var store = new Ext.data.JsonStore({
+                fields:["name", "visits", "views"],
+                url:"text.jsp"
+            });
+            store.load();
+            // extra extra simple
+            new Ext.Panel({
+                title: "ExtJS.com Visits Trend, 2007/2008 (No styling)",
+                renderTo: "chart",
+                width:800,
+                height:800,
+                url:"../js/ext/resources/charts.swf",
+//                layout:"fit",
+//                frame:true,
+                items: {
+                    xtype: "linechart",
+                    store: store,
+                    xField: "name",
+                    yField: "visits",
+                    listeners: {
+                        itemclick: function(o){
+                            var rec = store.getAt(o.index);
+                            Ext.Msg.alert("Item Selected", "You chose dddddddddddddddddd");
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body><div id="chart"></div>
+</body>
+</html>

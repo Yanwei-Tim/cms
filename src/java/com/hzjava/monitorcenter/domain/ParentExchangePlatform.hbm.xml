@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="parent_exchange_platform" name="com.hzjava.monitorcenter.domain.ParentExchangePlatform">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="platformName" column="platform_name" access="field" type="java.lang.String"/>
+    <property name="platformIp" column="platform_ip" access="field" type="java.lang.String"/>
+    <property name="platformMac" column="platform_mac" access="field" type="java.lang.String"/>
+    <property name="platformPort" column="platform_port" access="field" type="java.lang.Integer"/>
+    <property name="isEncrypted" length="1" column="is_encrypted" access="field" type="java.lang.String"/>
+    <property name="linkName" column="link_name" access="field" type="java.lang.String"/>
+    <property name="certificatePath" column="certificate_path" access="field" type="java.lang.String"/>
+    <property name="certificatePwd" column="certificate_pwd" access="field" type="java.lang.String"/>
+    <property name="memo" column="memo" access="field" type="java.lang.String"/>
+    <property name="address" column="address" access="field" type="java.lang.String"/>
+    <property name="enablereport" column="enablereport" access="field" type="java.lang.Boolean"/>
+    <property name="timeType" column="timeType" access="field" type="java.lang.String"/>
+    <property name="hour" column="hour" access="field" type="java.lang.String"/>
+    <property name="minute" column="minute" access="field" type="java.lang.String"/>
+    <property name="second" column="second" access="field" type="java.lang.String"/>
+    <property name="type"  column="type" access="field" type="java.lang.String" />
+    <property name="name" column="name" access="field" type="java.lang.String"/>
+    <property name="pass" column="pass" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

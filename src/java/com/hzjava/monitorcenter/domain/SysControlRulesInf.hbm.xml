@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="syscontrolrulesinf" name="com.hzjava.monitorcenter.domain.SysControlRulesInf">
+    <id access="field" name="id" type="long" column="id" length="11">
+      <generator class="increment"/>
+    </id>
+    <property name="fileName" length="128" column="filename" access="field" type="string"/>
+    <property name="desc" length="256" column="controldesc" access="field" type="string"/>
+    <property name="collectTime" column="collecttime" access="field" type="java.util.Date"/>
+  </class>
+</hibernate-mapping>

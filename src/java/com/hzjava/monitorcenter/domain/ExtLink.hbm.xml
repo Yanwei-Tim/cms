@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="ext_link" name="com.hzjava.monitorcenter.domain.ExtLink">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="linkName" column="link_name" access="field" type="java.lang.String"/>
+    <property name="linkPropertyCode" column="link_property" access="field" type="java.lang.String"/>
+    <many-to-one insert="false" column="link_property" access="field" update="false" class="com.hzjava.monitorcenter.domain.ExtLinkProperty" lazy="false" name="linkProperty"/>
+    <property name="linkTypeCode" column="link_type" access="field" type="java.lang.String"/>
+    <many-to-one insert="false" column="link_type" access="field" update="false" class="com.hzjava.monitorcenter.domain.ExtLinkType" lazy="false" name="linkType"/>
+    <property name="linkCorp" column="link_Corp" access="field" type="java.lang.String"/>
+    <property name="linkSecurity" column="link_security" access="field" type="java.lang.String"/>
+    <property name="linkAmount" column="link_amount" access="field" type="java.lang.Long"/>
+    <property name="linkBandWidth" column="link_bandwidth" access="field" type="java.lang.Long"/>
+    <property name="otherSecurity" column="other_security" access="field" type="java.lang.String"/>
+    <property name="ip" column="ip" access="field" type="java.lang.String"/>
+    <property name="mask" column="mask" access="field" type="java.lang.String"/>
+    <property name="gateway" column="gateway" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

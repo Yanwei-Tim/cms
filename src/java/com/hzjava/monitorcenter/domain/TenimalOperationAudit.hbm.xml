@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="tenimal_operation_audit" name="com.hzjava.monitorcenter.domain.TenimalOperationAudit">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="cardId" column="card_id" access="field" type="java.lang.String"/>
+    <property name="cardType" column="cardtype" access="field" type="java.lang.String"/>
+    <property name="policeId" column="policenumber" access="field" type="java.lang.String"/>
+    <property name="policeName" column="police_name" access="field" type="java.lang.String"/>
+    <property name="certId" column="cert_id" access="field" type="java.lang.String"/>
+    <property name="operateTpye" column="operate_tpye" access="field" type="java.lang.String"/>
+    <property name="operateTime" column="operate_time" access="field" type="java.util.Date"/>
+    <property name="operater" column="operater" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="equipment_log" name="com.hzjava.monitorcenter.domain.EquipmentLog">
+    <id access="field" name="Id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="LogTime" column="log_time" access="field" type="java.util.Date"/>
+    <property name="Level" column="level" access="field" type="java.lang.String"/>
+    <property name="LinkName" column="link_name" access="field" type="java.lang.String"/>
+    <property name="EquipmentName" column="equipment_name" access="field" type="java.lang.String"/>
+    <property name="LogInfo" column="log_info" access="field" type="java.lang.String"/>
+    <property name="LinkProperty" column="link_property" access="field" type="java.lang.String"/>
+    <property name="LinkType" column="link_type" access="field" type="java.lang.String"/>
+    <property name="LinkCorp" column="link_corp" access="field" type="java.lang.String"/>
+    <property name="LinkSecurity" column="link_security" access="field" type="java.lang.String"/>
+    <property name="LinkAmount" column="link_amount" access="field" type="java.lang.Long"/>
+    <property name="LinkBandwidth" column="link_bandwidth" access="field" type="java.lang.Long"/>
+    <property name="OtherSecurity" column="other_security" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

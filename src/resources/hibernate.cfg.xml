@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<mapping resource="com/hzjava/monitorcenter/domain/Account.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/Role.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/BusinessCode.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/BusinessExceptAlert.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/BusinessExceptCode.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/BusinessExchModel.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/BusinessHourReport.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/BusinessDayReport.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/BusinessMonthReport.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/BusinessLog.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/BusinessRegister.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/BusinessReport.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/Conf.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/Equipment.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/EquipmentAlert.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/EquipmentHourReport.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/EquipmentDayReport.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/EquipmentMonthReport.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/EquipmentLog.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/EquipmentType.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/EquipmentTypes.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/ExchangeDirection.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/ExchangePlatform.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/ExtLink.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/ExtLinkProperty.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/ExtLinkType.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/IntLink.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/Jbqk.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/MonitorAgent.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/Permission.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/PlatformFunctionModule.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/PlatformRunningCode.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/ProtocolType.hbm.xml" />
+
+	<mapping resource="com/hzjava/monitorcenter/domain/Sbpz.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/SecurityEventCode.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/SecurityEventAlert.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/SysDelService.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/SysLog.hbm.xml" />
+    <mapping resource="com/hzjava/monitorcenter/domain/SysQueryService.hbm.xml" />
+    <mapping resource="com/hzjava/monitorcenter/domain/TerminalAuthCode.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/UseDepartType.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/UserOperLog.hbm.xml" />
+
+	<mapping resource="com/hzjava/monitorcenter/domain/ParentExchangePlatform.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/ProvinceExchangePlatform.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/Sysruntime.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/Sysabnormal.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/Sysbizstatus.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/Sysstatus.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/LowerSysruntime.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/LowerSysabnormal.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/LowerSysbizstatus.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/LowerSysstatus.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/CardType.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/TermianlBand.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/TermianlOS.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/TermianlOutlink.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/TerminalType.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/TenimalOperationAudit.hbm.xml" />
+
+	<mapping resource="com/hzjava/monitorcenter/domain/TernimalAccessAudit.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/TernimalAccessAuditReport.hbm.xml"/>
+	<mapping resource="com/hzjava/monitorcenter/domain/TerminalAccessUrl.hbm.xml"/>
+	<mapping resource="com/hzjava/monitorcenter/domain/TerminalAddress.hbm.xml"/>
+
+	<mapping resource="com/hzjava/monitorcenter/domain/TenimalList.hbm.xml" />
+	
+	<mapping resource="com/hzjava/monitorcenter/domain/SysTerminalInfo.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/SysTerminalStatus.hbm.xml"/>
+	<mapping resource="com/hzjava/monitorcenter/domain/SysTerminalStatusRun.hbm.xml"/>
+	<mapping resource="com/hzjava/monitorcenter/domain/SysTerminalStatusRunReport.hbm.xml"/>
+	<mapping resource="com/hzjava/monitorcenter/domain/District.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/SysClass.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/SysControlRulesInf.hbm.xml" />
+	<mapping resource="com/hzjava/monitorcenter/domain/SysStrategyInf.hbm.xml"/>
+	<mapping resource="com/hzjava/monitorcenter/domain/SysabnormalEventCode.hbm.xml"/>
+	<mapping resource="com/hzjava/monitorcenter/domain/SysabnormalObjectType.hbm.xml"/>
+	<mapping resource="com/hzjava/monitorcenter/domain/SysabnormalResult.hbm.xml"/>
+	<mapping resource="com/hzjava/monitorcenter/domain/SysabnormalInf.hbm.xml"/>
+	<mapping resource="com/hzjava/monitorcenter/domain/Orgcode.hbm.xml"/>
+	<mapping resource="com/hzjava/monitorcenter/domain/SnmpOid.hbm.xml"/>
+</session-factory>
+</hibernate-configuration>

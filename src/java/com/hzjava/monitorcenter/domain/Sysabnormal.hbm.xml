@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="sysabnormal" name="com.hzjava.monitorcenter.domain.Sysabnormal">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="idSystem" column="Idsystem" access="field" type="java.lang.String"/>
+    <property name="idAlertMatter" column="Idalertmatter" access="field" type="java.lang.Long"/>
+    <property name="abNormalTypeCode" column="Abnormaltypecode" access="field" type="java.lang.String"/>
+    <many-to-one insert="false" column="Abnormaltypecode" access="field" update="false" unique="true" class="com.hzjava.monitorcenter.domain.SysabnormalEventCode" name="sysabnormalEventCode"/>
+    <property name="connectObjectCode" column="Connectobjectcode" access="field" type="java.lang.String"/>
+    <many-to-one insert="false" column="Connectobjectcode" access="field" update="false" class="com.hzjava.monitorcenter.domain.SysabnormalObjectType" name="sysabnormalObjectType"/>
+    <property name="exceptionDesc" column="Exceptiondesc" access="field" type="java.lang.String"/>
+    <property name="happenTime" column="Happentime" access="field" type="java.util.Date"/>
+    <property name="treatTime" column="Treattime" access="field" type="java.util.Date"/>
+    <property name="treadResult" column="Treadresult" access="field" type="java.lang.String"/>
+    <many-to-one insert="false" column="Treadresult" access="field" update="false" class="com.hzjava.monitorcenter.domain.SysabnormalResult" name="sysabnormalResult"/>
+    <property name="writeTime" column="writetime" access="field" type="java.util.Date"/>
+    <property name="username" column="username" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

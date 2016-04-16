@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="monitor_agent" name="com.hzjava.monitorcenter.domain.MonitorAgent">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="agentName" column="agent_name" access="field" type="java.lang.String"/>
+    <property name="agentIp" column="agent_ip" access="field" type="java.lang.String"/>
+    <property name="agentPort" column="agent_port" access="field" type="int"/>
+    <property name="isEncrypted" column="is_encrypted" access="field" type="java.lang.String"/>
+    <property name="linkName" column="link_name" access="field" type="java.lang.String"/>
+    <property name="agentStation" column="agent_station" access="field" type="java.lang.String"/>
+    <property name="certificatePath" column="certificate_path" access="field" type="java.lang.String"/>
+    <property name="certificatePwd" column="certificate_pwd" access="field" type="java.lang.String"/>
+    <property name="memo" column="memo" access="field" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

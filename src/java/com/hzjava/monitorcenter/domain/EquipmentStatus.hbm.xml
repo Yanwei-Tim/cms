@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hzjava.monitorcenter.domain.EquipmentStatus" table="equipment_status" >
+        <id access="field" name="id" type="java.lang.Long" column="Id">
+            <generator class="identity"/>
+        </id>
+        <property name="deviceId" column="deviceid" access="field" type="java.lang.Long"/>
+        <property name="status" column="status" access="field" type="java.lang.String"/>
+        <property name="type" column="type" access="field" type="java.lang.String"/>
+        <property name="createtime" column="createtime" access="field" type="java.util.Date"/>
+        <!--<set name="equipmentLogs" inverse="true">
+            <key>
+                <column name="deviceId" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.hzih.pubweb.domain.EquipmentLog" />
+        </set>-->
+    </class>
+</hibernate-mapping>

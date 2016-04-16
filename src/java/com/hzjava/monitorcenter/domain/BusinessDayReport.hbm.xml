@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class table="business_day_report" name="com.hzjava.monitorcenter.domain.BusinessDayReport">
+    <id access="field" name="id" type="java.lang.Long" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="businessName" column="business_name" access="field" type="java.lang.String"/>
+    <property name="reportDate" column="report_date" access="field" type="java.util.Date"/>
+    <property name="reportDay" column="report_day" access="field" type="java.lang.Integer"/>
+    <property name="reportMonth" column="report_month" access="field" type="java.lang.Integer"/>
+    <property name="reportYear" column="report_year" access="field" type="java.lang.Integer"/>
+    <property name="extDataFlow" column="ext_dataflow" access="field" type="java.lang.Double"/>
+    <property name="intDataFlow" column="int_dataflow" access="field" type="java.lang.Double"/>
+    <property name="extRecordCount" column="ext_record_count" access="field" type="java.lang.Long"/>
+    <property name="intRecordCount" column="int_record_count" access="field" type="java.lang.Long"/>
+    <property name="alertCount" column="alert_count" access="field" type="java.lang.Long"/>
+  </class>
+</hibernate-mapping>
